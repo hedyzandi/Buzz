@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/commenttextbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="bottom"
+        android:inputType="textMultiLine"
+        android:lines="10" >
+
+        <requestFocus android:layout_width="match_parent" />
+
+    </EditText>
+
+<Button
+    android:id="@+id/cancel"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/post"
+    android:layout_alignBottom="@+id/post"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="35dp"
+    android:onClick="cancelOnClick"
+    android:text="@string/cancel" />
+
+<Button
+    android:id="@+id/post"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/commenttextbox"
+    android:layout_marginLeft="28dp"
+    android:onClick="postOnClick"
+    android:text="@string/post" />
+</RelativeLayout>

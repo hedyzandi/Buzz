@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/specsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/LightGrey"
+    tools:context=".Screen3" >
+    
+    <ImageView
+        android:id="@+id/movieImage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="21dp"
+        android:layout_toLeftOf="@id/movieName1" />
+    
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/movieOverview"
+        android:layout_below="@+id/movieImage2"
+        android:layout_marginTop="20dp"
+        android:onClick="playTrailer"
+        android:text="Play Trailer" />
+    
+    <ScrollView
+        android:id="@+id/scroll1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button3"
+        android:layout_below="@+id/button1"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+    <TextView
+        android:id="@+id/movieOverview"
+        android:layout_width="fill_parent"
+        android:layout_height="208dp"
+        android:layout_marginTop="16dp"
+        android:text="Syonpsis"
+        android:textSize="20sp" />
+    
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button4"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button3"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_alignRight="@+id/scroll1"
+        android:onClick="goViewComments"
+        android:text="Show Comments" />
+
+
+    <Button
+        android:id="@+id/button3"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/scroll1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:onClick="goPostComment"
+        android:text="Post A Comment" />
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutForMovieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignRight="@+id/scroll1"
+        android:layout_alignTop="@+id/movieImage2"
+        android:layout_marginLeft="22dp"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/movieImage2" >
+    
+        <TextView
+        android:id="@+id/movieName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"	
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Movie Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+    
+        />
+        
+        <TextView
+        android:id="@+id/movieRating1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/movieName1"
+        android:text="Rating :" />
+
+    </RelativeLayout>
+   
+</RelativeLayout>
